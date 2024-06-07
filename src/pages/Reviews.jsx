@@ -10,11 +10,7 @@ import Box from '@mui/material/Box';
 import { Avatar } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 
-const opinion = {
-  nombre: 'Fulano',
-  producto: 'Xiaomi 13T Pro',
-  opinion: 'God',
-};
+
 function Reviews() {
   return (
     <>
@@ -71,7 +67,7 @@ function Forum() {
           <Box margin="10vh">
             <Typography variant="h5">Loquito del centro</Typography>
 
-            <Typography variant="body2">Muy buenos focos</Typography>
+            <Typography variant="body2">Muy buenos productos</Typography>
           </Box>
           <Avatar>BO</Avatar>
           <Box margin="10vh">

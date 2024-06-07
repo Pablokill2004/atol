@@ -8,14 +8,17 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Footer from './Footer.jsx';
+import { Container } from '@mui/material';
 
 function Todo() {
   return (
     <div>
       <Encabezado />
-      <br></br>
-      <TablaProductos />
-      <Contacto />
+      <Container sx={{ justifyContent: 'center',}}>
+       <TablaProductos />
+      </Container>
+      <Footer />
     </div>
   );
 }
@@ -32,10 +35,10 @@ function Encabezado() {
     <>
       <React.Fragment>
         <div style={cardStyle}>
-          <div style={{ padding: '20px', color: 'white' }}>
+          <div style={{ padding: '20px', color: 'white' , textAlign:'center'}}>
             {
-              <Card>
-                <CardMedia sx={{ height: 70 }} />
+              <Card  sx={{ height: 300, maxWidth:1100, margin: 2 ,justifyContent: 'center'}}>
+                <CardMedia />
                 <CardContent>
                   <Typography gutterBottom variant="h1" component="div">
                     Store Phones
@@ -56,10 +59,14 @@ function Encabezado() {
 }
 
 function TablaProductos() {
+  <style>
+    
+  </style>
   return (
     <>
+    
       <React.Fragment>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 1100}}>
           <CardMedia
             sx={{ height: 140 }}
             image="https://i.imgur.com/6ty0r2c.jpeg"
@@ -81,7 +88,7 @@ function TablaProductos() {
       </React.Fragment>
       <br></br>
       <React.Fragment>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{maxWidth: 1100 }}>
           <CardMedia
             sx={{ height: 140 }}
             image="https://i.imgur.com/Yo6IgZo.png"
@@ -103,7 +110,7 @@ function TablaProductos() {
       </React.Fragment>
       <br></br>
       <React.Fragment>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 1100 }}>
           <CardMedia
             sx={{ height: 140 }}
             image="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2024/03/xiaomi-14-3283519.jpg?tf=1200x1200"
@@ -127,24 +134,8 @@ function TablaProductos() {
   );
 }
 
-function Contacto() {
-  return (
-    <>
-      <React.Fragment>
-        <Card>
-          <CardMedia sx={{ height: 20 }} />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Informacion de contacto
-            </Typography>
-            <Typography variant="body2">Ricardo Caballeros 19001133</Typography>
-            <Typography variant="body2">Pablo Siquinajay 22006477</Typography>
-          </CardContent>
-        </Card>
-      </React.Fragment>
-    </>
-  );
-}
+
+
 export default function App() {
   return <Todo />;
 }
